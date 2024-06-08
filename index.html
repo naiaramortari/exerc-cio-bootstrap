@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA Compatible" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="exercicio.css">
@@ -20,20 +20,22 @@
     <table class="table">
         <caption>Tabela de preços da Morbelo Phone</caption>
         <thead>
-            <th>Telefone</th>
-            <th>Preço à vista</th>
-            <th>
-                <button class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#preco">
-                    Clique para ver forma de parcelamento
-                </button>
-            </th>
+            <tr>
+                <th>Telefone</th>
+                <th>Preço à vista</th>
+                <th>
+                    <button class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target=".preco">
+                        Clique para ver forma de parcelamento
+                    </button>
+                </th>
+            </tr>
         </thead>
         <tbody>
             <tr>
                 <td>Samsung S4</td>
                 <td>R$1.800,00</td>
                 <td>
-                    <div id="preco" class="collapse">
+                    <div class="preco collapse">
                         <p>12 x R$150,00</p>
                     </div>
                 </td>
@@ -42,7 +44,7 @@
                 <td>Xaomi</td>
                 <td>R$2.100,00</td>
                 <td>
-                    <div id="preco" class="collapse">
+                    <div class="preco collapse">
                         <p>12 x R$175,00</p>
                     </div>
                 </td>
@@ -51,7 +53,7 @@
                 <td>Iphone 12</td>
                 <td>R$2.300,00</td>
                 <td>
-                    <div id="preco" class="collapse">
+                    <div class="preco collapse">
                         <p>12 x R$150,00</p>
                     </div>
                 </td>
@@ -60,7 +62,7 @@
                 <td>Iphone 13</td>
                 <td>R$2.600,00</td>
                 <td>
-                    <div id="preco" class="collapse">
+                    <div class="preco collapse">
                         <p>12 x R$220,00</p>
                     </div>
                 </td>
@@ -69,7 +71,7 @@
                 <td>Iphone 15</td>
                 <td>R$5.500,00</td>
                 <td>
-                    <div id="preco" class="collapse">
+                    <div class="preco collapse">
                         <p>12 x R$460,00</p>
                     </div>
                 </td>
@@ -84,34 +86,34 @@
                 <input class="form-control" type="text" id="nome">
                 <label class="form-label" for="email">Seu e-mail:</label>
                 <input class="form-control" type="email" id="email">
-                <div class="accordion">
+                <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
-                        <div class="accordion-header">
-                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#opcao">
+                            <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#opcao" aria-expanded="true" aria-controls="opcao">
                                 Produto de interesse
                             </button>
-                        </div>
+                            </h2>
                         <div id="opcao" class="accordion-collapse collapse show">
                             <div class="accordion-body">
                                 <div class="form-check form-switch">                                    
                                     <label class="form-check-label" for="produtos">Samsung S4</label>
-                                    <input class="form-check-input" type="checkbox" id="produtos">
+                                    <input class="form-check-input" type="checkbox" id="produtos-s4">
                                 </div>
                                 <div class="form-check form-switch">                                    
                                     <label class="form-check-label" for="produtos">Xaomi</label>
-                                    <input class="form-check-input" type="checkbox" id="produtos">
+                                    <input class="form-check-input" type="checkbox" id="produtos-xaomi">
                                 </div>
                                 <div class="form-check form-switch">                                    
                                     <label class="form-check-label" for="produtos">Iphone 12</label>
-                                    <input class="form-check-input" type="checkbox" id="produtos">
+                                    <input class="form-check-input" type="checkbox" id="produtos-iphone12">
                                 </div>
                                 <div class="form-check form-switch">                                    
                                     <label class="form-check-label" for="produtos">Iphone 13</label>
-                                    <input class="form-check-input" type="checkbox" id="produtos">
+                                    <input class="form-check-input" type="checkbox" id="produtos-iphone13">
                                 </div>
                                 <div class="form-check form-switch">                                    
                                     <label class="form-check-label" for="produtos">Iphone 15</label>
-                                    <input class="form-check-input" type="checkbox" id="produtos">
+                                    <input class="form-check-input" type="checkbox" id="produtos-iphone15">
                                 </div>
                             </div>
                         </div>
@@ -122,7 +124,7 @@
                         <input class="form-check-input" type="checkbox" id="aceito-termos">
                         <label class="form-check-label" for="aceito-termos">Li e concordo com os termos do site</label>
                     </div>
-                    <button class="btn btn-success">Enviar</button>
+                    <button class="btn btn-success" type="submit">Enviar</button>
 
 
                 </div>
